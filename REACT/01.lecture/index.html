@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <!-- 필수 연결 -->
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script>
+            const e = React.createElement; //e = 태그를 만들어주는 함수 1-1
+
+            //좋아요 버튼 컴포넌트 class
+            class LikeButton extends React.Component {
+                constructor(props) {
+                    super(props);
+                    this.state = { // 상태 : 버튼에서 상태는 좋아요 누르기 전 '기본상태 : Like', 누룬 후 
+                        liked: false,
+                    }
+                }
+                render() {
+                    return e( //e = 태그를 만들어주는 함수 1-2
+                        'button', //html 태그
+                        { onClick: () => { this.setState({ liked: true })}, type: 'submit' }, //onclick="" 이벤트
+                        this.state.liked === true ? 'Liked' : 'Like', // 이벤트 내용 : 클릭하면 like > liked 텍스트 변경
+                    ); // return e () 내용이 다음과 같은 html로 출력됨 <button onclick="() => { this.setState({ liked: true })}" type="submit"></button>
+                }
+            }
+        </script>
+        <script>
+            ReactDOM.render(e(LikeButton), document.querySelector('#root')) //돔 렌더링 = 위 class LikeButton을 html 화면에 '출력'
+        </script>
+    </body>
+</html>

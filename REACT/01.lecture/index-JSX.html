@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <!-- 필수 연결 -->
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script><!-- 바벨 : 아래와 같은 실험적인 문법을 사용하게끔 함 -->
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            //좋아요 버튼 컴포넌트 class
+            class LikeButton extends React.Component {
+                constructor(props) {
+                    super(props);
+                    this.state = {
+                        liked: false,
+                    };
+                }
+                render() {
+                    return <button type="submit" onClick={() => { this.setState({ liked: true })}}>
+                        {this.state.liked === true ? '좋아요누름' : '좋아요'}
+                    </button>; //JSX = javascript + xml
+                }
+            }
+        </script>
+        <script type="text/babel">
+            ReactDOM.render(
+                <span class="btnWrap">
+                    <LikeButton />
+                    <LikeButton />
+                    <LikeButton />
+                    <LikeButton />
+                </span>, 
+                document.querySelector('#root')); // xml은 문법이 엄격하여 태그 닫기"/"를 필수로 적는다.
+        </script>
+    </body>
+</html>
