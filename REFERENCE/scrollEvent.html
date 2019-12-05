@@ -5,13 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>연습</title>
+    <style>
+        * {padding:0; margin:0;}
+        .box {height:300px;}
+        .box:nth-child(odd) {background-color: aquamarine;}
+        .box.active {background-color: red;}
+    </style>
 </head>
 <body>
-    <div>
-        
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box motion">
+        움직인다
     </div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
 
     <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/underscore-min.js"></script>
     <script src="./js/TweenMax.min.js"></script>
     <script src="./js/ui.js"></script>
 </body>
