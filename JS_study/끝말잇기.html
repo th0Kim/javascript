@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>끝말잇기</title>
+</head>
+<body>
+    <script>
+        var word = '끝말잇기';
+        while (true) {
+            var newWord = prompt(word);
+            if ( word[word.length -1] === newWord[0] ) {
+                // 맞힘
+                alert('딩동댕');
+                word = newWord;
+            } else {
+                // 틀림
+                alert('끝말잇기란 말이에요!');
+            }
+        };
+    </script>                   
+</body>
+</html>
