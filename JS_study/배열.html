@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>배열</title>
+</head>
+<body>
+    <script>
+        var 배열 = [
+                '사과',
+                '오렌지',
+                '포도',
+                '딸기'
+            ]
+        console.log(배열[0]);
+        console.log(배열);
+
+        var 배열같은객체 = {
+                0: '코끼리',
+                1: '고양이',
+                2: '강아지',
+                3: '치킨',    
+            }
+        console.log(배열같은객체[0]);
+
+        //배열과 배열같은객체를 구별하는 방법
+        var 구분 = Array.isArray(배열);
+        var 구분2 = Array.isArray(배열같은객체);
+        console.log(구분 + '→ true면 배열');
+        console.log(구분2 + '→ true면 배열');
+    </script>
+</body>
+</html>

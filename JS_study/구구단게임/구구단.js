@@ -20,8 +20,8 @@ var 버튼 = document.createElement('button');
 var 결과창 = document.createElement('div');
     document.body.append(결과창);
 
-폼.addEventListener('submit', function 콜백함수 (e) {
-    e.preventDefault();
+폼.addEventListener('submit', function 콜백함수 (e) { //e 는 매개변수
+    e.preventDefault(); // 폼은 submit을 하면 새로고침이 기본동작, 이 *기본동작을 막기 = 새로고침이 되어버리면 이벤트 저장된 값이 ㅂ2ㅂ2 
     if ( 결과 === Number(입력창.value) ) {//입력창.value를 숫자로 변환
         결과창.textContent = '딩동댕';
         //리셋
