@@ -5,7 +5,7 @@ module.exports = {
     mode: 'dvelopment',
     devtool: 'eval',
     resolve: {
-        extensions: ['.js','.jsx']
+        extensions: ['.js', '.jsx']
     },
     
     entry: {
@@ -15,7 +15,7 @@ module.exports = {
         rules: [{
             test: /\.jsx?/,
             loader: 'babel-loader',
-            option: {
+            options: {
                 presets: ['@babel/preset-env','@babel/preset-react'],
                 plugins: ['@babel/plugin-proposal-class-properties'],
             }
